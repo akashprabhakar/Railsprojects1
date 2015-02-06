@@ -1,0 +1,46 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title RailsBlog
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    .bg-wrapper
+      %header.bg-header
+        %h1 Learn Rails 
+
+       
+        %ul
+          %li
+            %a Home
+            %a Products
+            %a Blog
+            %a Contact
+
+
+
+
+        
+
+      %main.bg-main-content
+       
+        .bg-sidebar
+          %h3.bg-side-header Categories 
+
+          %ul
+            %li
+              %a Home
+              %a Products
+              %a Blog
+              %a Contact
+              %a= yield :aside
+
+
+        .bg-content
+          = yield
+
+        
+
+        

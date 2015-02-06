@@ -1,0 +1,20 @@
+.bg-headers 
+	%h1 Posts
+- @posts.each do |post|
+	.posts-content
+		.comment
+			.comment-image
+				= image_tag post.image.url(:thumb)  
+			.comment-content
+				%h1= post.title
+				%p= post.sdesc
+				%p.comment-detail= link_to 'Show', post
+				= link_to 'Edit', edit_post_path(post)
+				= link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+-content_for :aside do
+	= render 'sidebar' 
+
+
