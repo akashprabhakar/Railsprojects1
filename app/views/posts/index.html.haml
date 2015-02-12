@@ -1,16 +1,16 @@
 .bg-headers 
 	%h1 Posts
 - @posts.each do |post|
-	.posts-content
+	%div{:class => "posts-content", :id => "post_#{post.id}" }
 		.comment
 			.comment-image
 				= image_tag post.image.url(:thumb)  
-			.comment-content
+			%div{:class => "comment-content", :id => "title"}
 				%h1= post.title
 				%p= post.sdesc
 				%p.comment-detail= link_to 'Show', post
 				= link_to 'Edit', edit_post_path(post)
-				= link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
+				= link_to 'Remove', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 

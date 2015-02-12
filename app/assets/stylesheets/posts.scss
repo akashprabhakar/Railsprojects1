@@ -69,8 +69,10 @@ body {
 					&:hover {
 						color: #fff;
 						background-color: lighten($color-1, 20%);
-
+						
 					}
+
+
 				}
 
 			}
@@ -204,6 +206,10 @@ body {
 			height:50px;
 			border-bottom:1px solid #ccc;
 			text-align:right;
+		}
+
+		.blog {
+			background-color:#f00;
 		}
 	}
 

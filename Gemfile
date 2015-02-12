@@ -14,6 +14,8 @@ gem 'neat'
 
 gem 'refills'
 
+gem 'ckeditor'
+gem 'responders', '~> 2.0'
 gem "paperclip", "~> 4.2"
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -28,6 +30,10 @@ gem 'jquery-rails'
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
+
+gem "RedCloth"
+
+gem "coderay"
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
@@ -49,11 +55,14 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'factory_girl_rails'
 end
 
 group :test do
+  gem 'rspec-rails'
   gem 'rspec-expectations'
-  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails', require: false
+  gem 'capybara-webkit', '~> 1.1.0'
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
 end
