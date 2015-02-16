@@ -9,10 +9,14 @@ gem 'pg'
 gem 'sass-rails', '~> 5.0'
 
 gem 'bourbon'
-
+gem 'devise'
 gem 'neat'
 
 gem 'refills'
+
+
+gem 'redcarpet'
+gem 'coderay'
 
 gem 'ckeditor'
 gem 'responders', '~> 2.0'
@@ -31,9 +35,9 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 
-gem "RedCloth"
 
-gem "coderay"
+
+
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
@@ -67,3 +71,7 @@ group :test do
   gem 'database_cleaner'
 end
 
+group :production do
+  gem 'rails_12factor', '0.0.2'
+
+end

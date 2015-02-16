@@ -1,15 +1,12 @@
 Rails.application.routes.draw do
+  
+
   mount Ckeditor::Engine => '/ckeditor'
-  resources :posts
+ 
 
-  get 'posts/index'
-
-  get 'posts/edit'
-
-  get 'posts/show'
-
-  get 'posts/delete'
-
+  resources :posts do
+    resources :comments, :only => [:create]
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

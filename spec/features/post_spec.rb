@@ -44,7 +44,7 @@ feature 'Create Posts' do
     click_on 'Save'
 
     expect(page).to have_content("Post was successfully updated.")
-    expect(page).to have_content("Second edit")
+    expect(page).to have_content("Second edits")
 
   end
 
@@ -52,7 +52,7 @@ feature 'Create Posts' do
     visit posts_path
 
     expect(page).to have_content(@post.title)
-    click_on 'Destroy'
+    click_on 'Remove'
 
 
     expect(page).to_not have_content(@post.title)

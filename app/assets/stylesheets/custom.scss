@@ -1,23 +1,24 @@
 .CodeRay {  
-  background-color: #232323;  
-  border: 1px solid black;  
+  background-color:#171615; 
+  border: solid 1px #CCC; 
   font-family: 'Courier New', 'Terminal', monospace;  
   color: #E6E0DB;  
-  padding: 3px 2px;  
-  overflow: auto;  
   font-size: 12px;  
-  margin: 12px 0;  
-  margin-left:-10px;
-  text-align: left;
+  margin: 0 0; 
+  border-left:2px solid #f00; 
+ 
 } 
 
-.CodeRay span {
+
+
+.CodeRay code {
+  text-align:left;
 	
 } 
 
 .CodeRay pre {  
   margin: 0px;  
-  padding: 0px;  
+  padding: 2px;  
 } 
 
 
@@ -41,7 +42,6 @@
 .CodeRay .regexp .delimiter { color: #e5da7a; }
 .CodeRay .regexp .content { color: #e5da7a; }
 .CodeRay .regexp .inline { color: #e5da7a; }
-.CodeRay .regexp .inline .delimiter { color: #e5da7a; }
 .CodeRay .regexp .inline .constant { color: #6bd9ed; }
 .CodeRay .regexp .modifier { color: #e5da7a; }
 

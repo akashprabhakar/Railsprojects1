@@ -17,10 +17,4 @@ Feature: Creating a blog post
     And I click the button save
     Then I should see the content Post was successfully created.
 
-  Scenario: Editing a blog posts
-    Given I am on the posts index page
-    When I click on the link Edit
-   
-   
-
-    
+ 

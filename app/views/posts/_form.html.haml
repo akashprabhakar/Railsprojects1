@@ -11,7 +11,7 @@
   .field
     = f.text_area :sdesc, placeholder: 'Short description of the blog'
   .field
-    = f.cktext_area :body, placeholder: 'Enter content for the blog', :ckeditor => {:toolbar => 'Full'}
+    = f.cktext_area :body, placeholder: 'Enter content for the blog', :rows => 40, :cols => 1000, :ckeditor => {:toolbar => 'Full'}
   .field
     = f.file_field :image
   .actions
